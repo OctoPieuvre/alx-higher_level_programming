@@ -1,0 +1,2 @@
+#!/usr/bash
+python -m $PYFILE $PYFILEc
