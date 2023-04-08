@@ -3,16 +3,21 @@
 """ Define a class Square. """
 
 class Square:
-    """
-        Represent a square
+    """Represent a square.
+
+    Attributes:
+        size (int): size of square.
     """
 
     def __init__(self, size=0):
-        """
-            Initializes a new square.
+        """Initializes a new square.
 
             Args:
-                size (int): th size of square
+                size (int): the size of square.
+            Raises:
+                TypeError: if size is not an integer.
+                ValueError: if size is < 0.
+                
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
