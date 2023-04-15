@@ -19,6 +19,8 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    text = text.lstrip()
+
     i = 0
     while i < len(text):
         if text[i] in ['.', '?', ':']:
@@ -28,6 +30,5 @@ def text_indentation(text):
             while i < len(text) and text[i] == ' ':
                 i += 1
         else:
-            if text[i] != ' ':
-                print(text[i], end='')
+            print(text[i], end='')
             i += 1
