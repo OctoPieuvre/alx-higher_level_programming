@@ -44,7 +44,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_one_negative_elements(self):
         """Test a list of one negative element"""
-        self.assertEqual(max_integer([1, 5, -3, 7, 2]), 1)
+        self.assertEqual(max_integer([1, 5, -3, 7, 2]), 7)
 
     def test_float_elements(self):
         """Test a list of float elements"""
