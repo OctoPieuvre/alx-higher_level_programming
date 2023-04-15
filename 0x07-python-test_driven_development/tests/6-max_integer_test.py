@@ -42,3 +42,6 @@ class TestMaxInteger(unittest.TestCase):
         """Test of a string"""
         with self.assertRaises(TypeError):
             max_integer(['a', 'b', 'c'])
+
+if __name__ == "__main__":
+    unittest.main()
