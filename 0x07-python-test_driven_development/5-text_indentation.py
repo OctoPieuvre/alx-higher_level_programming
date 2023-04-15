@@ -30,6 +30,9 @@ def text_indentation(text):
     if sentence:
         sentences.append(sentence.strip())
 
-    for sentence in sentences:
-        print(sentence)
-        print()
+    for i, sentence in enumerate(sentences):
+        if i < len(sentences) - 1:
+            print(sentence)
+            print()
+        else:
+            print(sentence, end="")
