@@ -4,7 +4,7 @@
 
 def text_indentation(text):
     """
-    Prints the input text with two new lines after 
+    Prints the input text with two new lines after
     each sentence-ending punctuation mark.
 
     Args:
@@ -16,7 +16,7 @@ def text_indentation(text):
     Returns:
         None
     """
-     if not isinstance(text, str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     punctuations = [".", "?", ":"]
