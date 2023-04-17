@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-"""Define a class that defines a rectangle"""
+"""Define a class that defines a rectangle."""
 
 
 class Rectangle:
     """
     A class that defines a rectangle.
 
-    Attributes:
+    Args:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
     """
