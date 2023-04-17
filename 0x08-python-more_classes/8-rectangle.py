@@ -120,8 +120,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            return "\n".join([str(self.print_symbol) * self.__width]
-                    * self.__height)
+            return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """ Returns a representation of the rectangle"""
@@ -139,7 +138,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        elif rect_1.area >= rect_2.area:
+        elif rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2
