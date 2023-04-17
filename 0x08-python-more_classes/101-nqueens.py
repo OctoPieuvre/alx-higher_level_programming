@@ -4,7 +4,9 @@ Determines all possible solutions to placing N
 N non-attacking queens on an NxN chessboard
 """
 
+
 import sys
+
 
 def solve_n_queens(n):
     if not isinstance(n, int):
@@ -30,6 +32,7 @@ def solve_n_queens(n):
                     backtrack(queens + [(row, col)])
 
     backtrack([])
+
 
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
