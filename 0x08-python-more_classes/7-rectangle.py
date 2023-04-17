@@ -121,7 +121,7 @@ class Rectangle:
             return ""
         else:
             return "\n".join([str(self.print_symbol) * self.__width]
-                * self.__height)
+                    * self.__height)
 
     def __repr__(self):
         """ Returns a representation of the rectangle"""
