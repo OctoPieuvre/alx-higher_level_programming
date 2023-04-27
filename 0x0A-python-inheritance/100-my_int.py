@@ -3,11 +3,12 @@
 
 
 class MyInt(int):
-     """Invert int operators == and !=."""
+    """Invert int operators == and !=."""
+
     def __eq__(self, other):
         """Override == opeartor with != behavior."""
-        return self.real != other
-    
+        return super().__ne__(other)
+
     def __ne__(self, other):
         """Override != operator with == behavior."""
-        return self.real == other
+        return super().__eq__(other)
