@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """a function that read a UTF8 file"""
-    with open(filename, 'r', encoding='utf8') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         content = file.read()
-        print(content)
+        print(content, end="")
