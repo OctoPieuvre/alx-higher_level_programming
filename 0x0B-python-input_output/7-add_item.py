@@ -10,12 +10,10 @@ if __name__ == "__main__":
 # Load existing items from file or create empty list
 try:
     items = load_from_json_file('add_item.json')
-except:
+except FileNotFoundError:
     items = []
-
-# Add new items to the list
-for arg in sys.argv[1:]:
+    # Add new items to the list
+    for arg in sys.argv[1:]:
     items.append(arg)
-
-# Save the updated list to file
-save_to_json_file(items, 'add_item.json')
+    # Save the updated list to file
+    save_to_json_file(items, 'add_item.json')
