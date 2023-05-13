@@ -35,7 +35,7 @@ class Rectangle:
             Args:
                 value (int): value to be set.
         """
-        return self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -51,7 +51,7 @@ class Rectangle:
             Args:
                 value (int) value to be set.
         """
-        return self.__height = value
+        self.__height = value
 
     @property
     def x(self):
@@ -67,7 +67,7 @@ class Rectangle:
             Args:
                 Value (int) : value to be set
         """
-        return self.__x = value
+        self.__x = value
 
     @property
     def y(self):
@@ -83,4 +83,4 @@ class Rectangle:
             Args:
                 Value (int) : value to be set
         """
-        return self.__y = value
+        self.__y = value
