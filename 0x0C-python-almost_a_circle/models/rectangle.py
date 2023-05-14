@@ -105,3 +105,19 @@ class Rectangle(Base):
     def area(self):
         """Returns the area of the instnace rectangle"""
         return(self.__width * self.__height)
+
+    def display(self):
+        """prints to stdout the Rectangle instance with '#'"""
+
+        rect = ""
+        print_symb = "#"
+
+        for i in range(self.__height):
+            rect += (self.__width * print_symb) + "\n"
+        print(rect, end="")
+
+    def __str__(self):
+        """return a string format"""
+
+        return "[Rectangle] ({}) {}/{} {}/{}".format(self.id, self.__x,
+                self.__y, self.__width, self.__height)
