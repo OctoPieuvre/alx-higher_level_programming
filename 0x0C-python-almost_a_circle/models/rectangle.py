@@ -130,6 +130,11 @@ class Rectangle(Base):
             Args:
                 *args -  variable number of no-keyword args
                 **kwargs - variable number of keyworded args"""
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return
+
         try:
             self.id = args[0]
             self.width = args[1]
@@ -138,3 +143,4 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
+
