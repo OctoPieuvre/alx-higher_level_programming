@@ -112,8 +112,10 @@ class Rectangle(Base):
         rect = ""
         print_symb = "#"
 
+        print("\n" * self.__y)
+
         for i in range(self.__height):
-            rect += (self.__width * print_symb) + "\n"
+            rect += (" " * self.__x) + (self.__width * print_symb) + "\n"
         print(rect, end="")
 
     def __str__(self):
