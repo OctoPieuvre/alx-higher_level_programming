@@ -35,3 +35,24 @@ class Square(Rectangle):
         """overloading string"""
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
+
+
+    def update(self, *args, **kwargs):
+        """
+            assigns key/value argument to attributes
+            kwargs is skipped if args is not empty
+            Args:
+                *args -  variable number of no-keyword args
+                **kwargs - variable number of keyworded args
+        """
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
