@@ -130,9 +130,11 @@ class Rectangle(Base):
             Args:
                 *args -  variable number of no-keyword args
                 **kwargs - variable number of keyworded args"""
-
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
