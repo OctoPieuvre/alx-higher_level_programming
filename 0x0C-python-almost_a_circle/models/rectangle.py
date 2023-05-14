@@ -124,7 +124,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns key/value argument to attributes
             kwargs is skipped if args is not empty
             Args:
