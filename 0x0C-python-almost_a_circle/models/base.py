@@ -49,3 +49,37 @@ class Base:
 
         with open(fname, mode="w") as f:
             json.dump(content, f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls.__name__ == "Rectangle":
+            md = Rectangle(2, 6)
+        if cls.__name__ == "Square":
+            md = Square(4)
+        md.update(**dictionary)
+        return md
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        file_name = cls.__name__ + ".json"
+
+        try:
+            with open(file_name, encoding="UTF8") as fd:
+                content = cls.from_json_string(fd.read())
+        except:
+            return []
+
+        instances = []
