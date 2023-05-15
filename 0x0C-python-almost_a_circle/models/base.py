@@ -83,3 +83,9 @@ class Base:
             return []
 
         instances = []
+
+        for instance in content:
+            tmp = cls.create(**instance)
+            instances.append(tmp)
+
+        return instances
